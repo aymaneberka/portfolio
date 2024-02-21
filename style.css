@@ -303,6 +303,10 @@ section{
     animation-name: slideInright;
 }
 
+.hero_avatar img{
+    width:100%;
+ }
+
 @media screen and (max-width:749px){
     .hero_item.left{
         order:2;
@@ -325,7 +329,6 @@ section{
         font-size: 5rem;
     }
     .hero_avatar img{
-        max-width: 400px;
        border-radius: 50%;
     }
 }
@@ -503,15 +506,6 @@ section{
     opacity: 1;
     transition: all 1s ease;
   }
-  
-  @media screen and (min-width: 750px) {
-    .modal .grid_item {
-      max-width: 50%;
-    }
-    .modal_content {
-      padding: 3rem;
-    }
-  }
 
 @media screen and (max-width:749px){
     .portfolio a{
@@ -527,6 +521,9 @@ section{
     .portfolio_filtre .grid_item{
         max-width:25%;  
     }
+    .modal_content {
+        padding: 3rem;
+      }
     .modal .grid_item {
         max-width: 50%;
       }
@@ -676,6 +673,60 @@ footer .social .icon{
     to{
         transform: translateX(0);
     }
+}
+
+
+.blog h1{
+    text-align: center;
+}
+
+.blog_text{
+    margin-bottom: 3rem;
+}
+
+.article_card{
+    position: relative;
+    margin: 2rem;
+}
+
+.article_img{
+    transition: 0.5s ease-in;
+    filter: grayscale(100%);
+}
+
+.article_card:hover img{
+    filter: grayscale(0%);
+}
+
+.stretched-link::after{
+    position: absolute ;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    content: "";
+}
+
+@media screen and (min-width: 750px){
+    .d-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2rem ;
+    }
+    .content_grid{
+        display: grid;
+        grid-template-columns: 6fr 2fr ;
+        grid-column-gap: 2rem ;
+        grid-template-areas:"article sidebar" ;
+    }
+    .article{
+        grid-area:article;
+    }
+    .sidebar{
+        grid-area:"sidebar";
+    }
+    
 }
 
 
