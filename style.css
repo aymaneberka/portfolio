@@ -689,12 +689,12 @@ footer .social .icon{
     margin: 2rem;
 }
 
-.article_img{
+.article_card{
     transition: 0.5s ease-in;
     filter: grayscale(100%);
 }
 
-.article_card:hover img{
+.article_card:hover{
     filter: grayscale(0%);
 }
 
